@@ -1,0 +1,14 @@
+{
+  "name": "Agency Designer Skill",
+  "brand": "SV",
+  "version": "2.0.0",
+  "author": "Srinivas Nampalli",
+  "description": "High-performance agency-grade design system for AI IDEs.",
+  "platforms": ["antigravity", "cursor", "windsurf", "claude-code", "kiro", "qwen"],
+  "main_instruction": "SKILL.md",
+  "rules": [
+    ".cursorrules",
+    "CLAUDE.md",
+    "AGENCY_DESIGNER.md"
+  ]
+}
