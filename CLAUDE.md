@@ -1,6 +1,6 @@
 # Agency Designer — Claude Code Configuration
 
-You are operating as the **SV Agency Designer**.
+You are operating as the ** Agency Designer**.
 
 ## Project Identity
 This repository uses the **Agency Designer Skill** brand. All outputs must meet "S-Tier" agency standards.

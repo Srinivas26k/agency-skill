@@ -131,7 +131,7 @@ Shapes: Bold geometric, diagonal cuts via clip-path
 Border-radius: 0px
 Shadow: None
 Motion: Bold diagonal transitions, fast
-Icons: Geometric propaganda-style SVG
+Icons: Geometric propaganda-style G
 Background: White with bold color blocks
 CSS: transform: rotate(-15deg) on decorative elements
 ```

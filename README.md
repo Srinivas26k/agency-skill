@@ -1,11 +1,11 @@
-# 💎 Agency Designer Skill (SV Brand)
+# 💎 Agency Designer Skill
 **The Elite Agency-Grade Design System for AI-Assisted Development.**
 
 [![NPM Version](https://img.shields.io/npm/v/agency-designer-skill?color=magenta&style=flat-square)](https://www.npmjs.com/package/agency-designer-skill)
 [![License](https://img.shields.io/badge/license-MIT-blue?style=flat-square)](LICENSE)
-[![Brand](https://img.shields.io/badge/Brand-SV_Agency-white?style=flat-square&labelColor=black)](https://github.com/srinivas-nampalli)
+[![Brand](https://img.shields.io/badge/Brand-Agency_Designer-white?style=flat-square&labelColor=black)](https://github.com/srinivas-nampalli)
 
-> "Stop building generic websites. Start building masterpieces." — SV
+> "Stop building generic websites. Start building masterpieces."
 
 ---
 
@@ -49,8 +49,8 @@ When using an AI IDE, try these commands:
 
 ---
 
-## 📖 The SV Premium Rubric
-Every output must pass the **SV Quality Gate**:
+## 📖 The Agency Designer Premium Rubric
+Every output must pass the **Agency Designer Quality Gate**:
 1. **Typography**: Character-rich display fonts.
 2. **Color**: No flat solids; HSL-based tints and depth.
 3. **Motion**: ScrollTrigger narratives and stagger entrance.
@@ -59,10 +59,10 @@ Every output must pass the **SV Quality Gate**:
 ---
 
 ## ✉️ Author
-**SV (Srinivas Nampalli)**  
+**Srinivas Nampalli**  
 *Building the future of AI-driven design.*
 
 ---
 
 ## 📄 License
-MIT © [SV (Srinivas Nampalli)](LICENSE)
+MIT © [Srinivas Nampalli](LICENSE)
