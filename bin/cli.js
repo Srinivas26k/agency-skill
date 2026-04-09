@@ -9,7 +9,8 @@ import { fileURLToPath } from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const program = new Command();
 
-const BRAND = chalk.bold.magenta('Agency Designer');
+const BRAND = chalk.bold.magenta('Agency Designer Skill');
+const AUTHOR = chalk.dim('by Srinivas Nampalli');
 
 program
   .name('agency-designer')
@@ -21,7 +22,7 @@ program
   .description('Bootstrap your project with Agency Designer rules and assets.')
   .argument('[dir]', 'Project directory', '.')
   .action(async (dir) => {
-    console.log(`\n🚀 Initializing ${BRAND} in ${chalk.blue(dir)}...\n`);
+    console.log(`\n🚀 Initializing ${BRAND} ${AUTHOR} in ${chalk.blue(dir)}...\n`);
 
     const targetDir = path.resolve(process.cwd(), dir);
     const sourceDir = path.resolve(__dirname, '..');

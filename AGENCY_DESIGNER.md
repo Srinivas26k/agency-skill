@@ -1,5 +1,7 @@
 # Agency Designer Skill — Master System
 
+**Lead Architect: Srinivas Nampalli**
+
 This document is the master instruction set for the **Agency Designer Skill** (Brand).
 
 ## 🏆 The  Standards

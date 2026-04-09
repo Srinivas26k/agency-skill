@@ -1,25 +1,30 @@
 # 💎 Agency Designer Skill
 **The Elite Agency-Grade Design System for AI-Assisted Development.**
 
+---
+
+### Created by [Srinivas Nampalli](github.com/Srinivas26k/)
+**Standardizing S-Tier Visuals for a New Era of AI Coding.**
+
+---
+
 [![NPM Version](https://img.shields.io/npm/v/agency-designer-skill?color=magenta&style=flat-square)](https://www.npmjs.com/package/agency-designer-skill)
 [![License](https://img.shields.io/badge/license-MIT-blue?style=flat-square)](LICENSE)
 [![Brand](https://img.shields.io/badge/Brand-Agency_Designer-white?style=flat-square&labelColor=black)](https://github.com/srinivas-nampalli)
 
 > "Stop building generic websites. Start building masterpieces."
 
----
-
 ## 🚀 What is Agency Designer?
-**Agency Designer** is a specialized instruction layer (or "Skill") that transforms your AI Coding Assistant (Cursor, Claude Code, Windsurf, etc.) into a Senior Design Partner. 
+**Agency Designer** is a specialized procedural knowledge layer (Skill) that transforms any AI Coding Assistant (Cursor, Claude Code, Windsurf, Trae) into a High-End Agency Design Partner. 
 
-It injects 10+ years of agency-level marketing psychology, motion design, and high-fidelity UI standards directly into the AI's context.
+It injects a decade of premium design standards, marketing psychology, and motion choreography directly into the AI's cognitive loop.
 
-### ✨ Why Use It?
+### ✨ Core Pillars
 - **Viral Aesthetics**: Automatically applies glassmorphism, aurora gradients, and grain textures.
-- **Premium Imagery**: Automated sourcing from Unsplash & Pexels with CSS brand overlays.
+- **Premium Imagery**: Integrated sourcing from Unsplash & Pexels with automated CSS "Veneer" treatments.
 - **Conversion Thinking**: Rewrites your AI's copy to follow high-converting marketing frameworks (PAS, AIDA).
-- **Cinematic Motion**: Implements GSAP and Framer Motion by default.
-- **Pro Logic**: No more generic colors or default fonts. Only S-tier designs.
+- **Cinematic Motion**: Implements GSAP, Framer Motion, and Anime.js by default.
+- **Universal AI Support**: Optimized for Claude Code, Cursor, Windsurf, Qwen, and Antigravity.
 
 ---
 
@@ -31,37 +36,31 @@ Bootstrap any project in seconds:
 npx agency-designer-skill init
 ```
 
-### Supported AI IDEs
-Agency Designer comes with pre-configured rule files for:
-- ⚡ **Cursor**: `.cursorrules` optimized.
-- 💨 **Windsurf**: `.windsurfrules` compatible.
-- 🧡 **Claude Code**: `CLAUDE.md` native support.
-- 🚀 **Antigravity / Kiro / Qwen**: Master `AGENCY_DESIGNER.md` included.
+### via Skills Registry
+Add this skill to your global environment:
+```bash
+npx skills add srinivas-nampalli/agency-designer-skill
+```
 
 ---
 
-## 🎮 Slash Commands
-When using an AI IDE, try these commands:
+## 🎮 Designer Slash Commands
+When using an AI IDE, trigger these commands to bypass MVP-level outputs:
 
 - `/design [1-100]` — Apply a specific graphic style.
 - `/animate [type]` — Add GSAP/Framer motion.
+- `/imagery [mood]` — Source premium images + CSS Branding.
 - `/palette [emotion]` — Generate a psychology-backed color theme.
-- `/evaluate` — Run the 50-point Premium Quality Rubric.
+- `/evaluate` — Run the 50-point Agency Designer Quality Rubric.
 
 ---
 
-## 📖 The Agency Designer Premium Rubric
-Every output must pass the **Agency Designer Quality Gate**:
-1. **Typography**: Character-rich display fonts.
-2. **Color**: No flat solids; HSL-based tints and depth.
-3. **Motion**: ScrollTrigger narratives and stagger entrance.
-4. **Marketing**: Headlines must promise a result.
-
----
-
-## ✉️ Author
-**Srinivas Nampalli**  
-*Building the future of AI-driven design.*
+## 📖 The Agency Designer Quality Gate
+Every output must pass the standard set by Srinivas Nampalli:
+1. **Typography**: Character-rich display fonts (No generic Sans).
+2. **Color**: No flat solids; HSL-based tints and atmospheric depth.
+3. **Motion**: ScrollTrigger narratives and stagger entrances.
+4. **Marketing**: Headlines must promise a result [without PAIN].
 
 ---
 
