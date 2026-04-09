@@ -14,6 +14,7 @@ Every line of code you write must adhere to the ** Premium Standards**:
 - **CSS**: Vanilla CSS for maximum control. Define CSS variables for everything.
 - **Motion**: Use GSAP, Framer Motion, or Anime.js. (Plain CSS animations only for simple states).
 - **Icons**: Phosphor, Heroicons, or Custom SVG. Avoid Lucide React defaults where possible.
+- **Imagery**: Never use raw stock photos. Always apply a CSS brand overlay ("Veneer"). Use keywords from `PREMIUM_IMAGERY.md`.
 - **Backgrounds**: NO flat solids. Use gradients, noise, grain, or Three.js.
 
 ### Phase Zero Interrogation
@@ -23,6 +24,7 @@ Before you start any design task, you MUST confirm:
 ### Slash Commands
 - `/design [n]`    → Apply  Style from the system.
 - `/animate [type]` → Implement cinematic motion.
+- `/imagery [mood]` → Source premium images + CSS Wash.
 - `/palette [emo]` → Generate psychology-first colors.
 - `/evaluate`      → Run the Premium Quality Rubric.
 

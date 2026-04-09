@@ -16,6 +16,7 @@ It injects 10+ years of agency-level marketing psychology, motion design, and hi
 
 ### ✨ Why Use It?
 - **Viral Aesthetics**: Automatically applies glassmorphism, aurora gradients, and grain textures.
+- **Premium Imagery**: Automated sourcing from Unsplash & Pexels with CSS brand overlays.
 - **Conversion Thinking**: Rewrites your AI's copy to follow high-converting marketing frameworks (PAS, AIDA).
 - **Cinematic Motion**: Implements GSAP and Framer Motion by default.
 - **Pro Logic**: No more generic colors or default fonts. Only S-tier designs.

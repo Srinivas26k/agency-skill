@@ -10,6 +10,7 @@ The  brand represents high-performance, high-aesthetic digital products. When th
 - **Aurora Gradients**: Shifting, multi-layered mesh gradients.
 - **Grain**: SVG-based fractal noise for premium texture.
 - **Typography**: Display/Serif for headers, Geometric Sans for body.
+- **Visuals**: Use Unsplash/Pexels with keyword-pairing. Always apply a CSS "Wash" (gradients/blur).
 
 ### 2. The Conversion Layer
 - Design without marketing is just art.

@@ -37,7 +37,8 @@ program
       'commands',
       'animations',
       'psychology',
-      'styles'
+      'styles',
+      'core/PREMIUM_IMAGERY.md'
     ];
 
     try {

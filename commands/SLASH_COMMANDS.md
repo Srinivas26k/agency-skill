@@ -62,6 +62,18 @@ Select a font pairing from TYPOGRAPHY_SYSTEM.md
 
 ---
 
+### `/imagery [keyword/style]`
+Sourcing premium imagery from PREMIUM_IMAGERY.md
+```
+/imagery luxury         → Architectural white + gold + minimal
+/imagery tech           → Dark neon + abstract connectivity
+/imagery organic        → Linen + nature + soft earth
+/imagery 30             → Images matching Aurora style (#30)
+```
+**Output**: Optimized Unsplash URL + CSS "Wash" container + object-fit rules
+
+---
+
 ### `/style-mix [style-a] + [style-b]`
 Blend two style aesthetics
 ```

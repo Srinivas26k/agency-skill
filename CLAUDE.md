@@ -19,5 +19,6 @@ This repository uses the **Agency Designer Skill** brand. All outputs must meet 
 - NO stock photos (use Unsplash/AI).
 - NO generic buttons.
 - NO flat backgrounds.
+- YES high-fidelity imagery with CSS overlays (`PREMIUM_IMAGERY.md`).
 - YES grain overlays.
 - YES smooth scrolling (Lenis).

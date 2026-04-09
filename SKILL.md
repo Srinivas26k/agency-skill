@@ -195,16 +195,18 @@ TIER 3 — Textured (standard premium):
 ```
 
 ### 3.2 Background Images
-Always use Unsplash-sourced or AI-generated imagery, NOT stock. Reference with:
+Always use **Agency-grade** imagery (Unsplash/Pexels) optimized for the mood.
+**Standard**: Refer to `PREMIUM_IMAGERY.md` for URL templates and mapping.
+
+#### The SV "Veneer" Rule:
+Never use a stock photo raw. Always apply a CSS brand overlay (Phase 3.4):
 ```html
-<!-- Dark abstract / texture -->
 <style>
 .hero {
   background-image:
-    linear-gradient(to bottom, rgba(5,5,15,0.85) 0%, rgba(5,5,15,0.7) 50%, rgba(5,5,15,0.9) 100%),
-    url('https://images.unsplash.com/photo-1557683316-973673baf926?w=1920&q=80');
+    linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.4)),
+    url('https://images.unsplash.com/featured/?premium,minimalist,architecture');
   background-size: cover;
-  background-position: center;
 }
 </style>
 ```
