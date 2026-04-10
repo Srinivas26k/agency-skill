@@ -1,12 +1,10 @@
 #!/usr/bin/env node
 
-import { Command } from 'commander';
-import fs from 'fs-extra';
-import path from 'path';
-import chalk from 'chalk';
-import { fileURLToPath } from 'url';
+const { Command } = require('commander');
+const fs = require('fs-extra');
+const path = require('path');
+const chalk = require('chalk');
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const program = new Command();
 
 const BRAND = chalk.bold.magenta('Agency Designer Skill');
@@ -56,9 +54,9 @@ program
 
       console.log(`\n✨ ${BRAND} successfully initialized!`);
       console.log(`\n${chalk.bold('Next Steps:')}`);
-      console.log(`1. Open this folder in ${chalk.cyan('Cursor')}, ${chalk.cyan('Windsurf')}, or ${chalk.cyan('VS Code')}.`);
-      console.log(`2. Trigger your AI with ${chalk.magenta('/design')} or ${chalk.magenta('/animate')}.`);
-      console.log(`3. Build something premium. 💎\n`);
+      console.log(`1. Open this folder in ${chalk.cyan('Cursor')}, ${chalk.cyan('VS Code')}, ${chalk.cyan('Copilot')}, ${chalk.cyan('Kiro')}, or ${chalk.cyan('Windsurf')}.`);
+      console.log(`2. Load the local rules, skill files, or managed-agent docs for your platform.`);
+      console.log(`3. Trigger your AI with ${chalk.magenta('/design')}, ${chalk.magenta('/animate')}, or a platform-specific agent workflow.\n`);
 
     } catch (err) {
       console.error(chalk.red('\n✖ Error during initialization:'), err.message);

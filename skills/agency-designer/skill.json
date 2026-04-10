@@ -1,16 +1,21 @@
 {
   "name": "Agency Designer Skill",
-  "brand": "",
+  "brand": "Agency Designer",
   "version": "2.0.0",
   "author": "Srinivas Nampalli",
-  "description": "High-performance agency-grade design system for AI IDEs.",
+  "description": "High-performance cross-platform skill pack for premium design, agent orchestration, and AI IDE workflows.",
   "platforms": [
     "antigravity",
     "cursor",
     "windsurf",
     "claude-code",
+    "managed-agents",
+    "github-copilot",
+    "gemini",
+    "goose",
     "kiro",
-    "qwen"
+    "qwen",
+    "vscode"
   ],
   "main_instruction": "SKILL.md",
   "rules": [

@@ -1,20 +1,26 @@
 {
   "name": "agency-designer-skill",
   "version": "2.0.0",
-  "description": "The elite agency-grade design system for AI-assisted development. Empowering LLMs to build premium, high-converting digital experiences.",
+  "description": "A cross-platform skill and agent toolkit for premium product design, managed runtimes, and AI IDE workflows.",
   "main": "index.js",
   "bin": {
     "agency-designer": "./bin/cli.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node tests/basic-rubric.test.js"
   },
   "keywords": [
     "ai",
     "design-system",
     "premium-ui",
+    "managed-agents",
+    "mcp",
     "cursor",
     "claude-code",
+    "github-copilot",
+    "gemini",
+    "goose",
+    "kiro",
     "web-design",
     "marketing",
     "ux",

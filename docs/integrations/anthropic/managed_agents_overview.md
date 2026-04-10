@@ -1,41 +1,82 @@
 # Claude Managed Agents Overview
 
-Pre-built, configurable agent harness that runs in managed infrastructure. Best for long-running tasks and asynchronous work.
+Claude Managed Agents is a pre-built, configurable agent harness that runs in managed infrastructure. It is a strong fit for long-running, tool-heavy, stateful work where you want a reusable agent definition instead of building your own loop from scratch.
 
----
+## Messages API vs Managed Agents
 
-Anthropic offers two ways to build with Claude, each suited to different use cases:
+| Dimension | Messages API | Claude Managed Agents |
+| --- | --- | --- |
+| What it is | Direct model prompting access | Managed agent runtime with tools, sessions, and environments |
+| Best for | Custom loops and fine-grained orchestration | Long-running tasks and asynchronous work |
+| Runtime | You build and host it | Anthropic hosts the agent harness |
+| Tool execution | You implement it | Built-in toolset plus MCP and custom tools |
 
-| | Messages API | Claude Managed Agents |
-|---|---|---|
-| **What it is** | Direct model prompting access | Pre-built, configurable agent harness that runs in managed infrastructure |
-| **Best for** | Custom agent loops and fine-grained control | Long-running tasks and asynchronous work |
-| **Learn more** | [Messages API docs](/docs/en/build-with-claude/working-with-messages) | [Claude Managed Agents docs](/docs/en/managed-agents/overview) |
-
-Claude Managed Agents provides the harness and infrastructure for running Claude as an autonomous agent. Instead of building your own agent loop, tool execution, and runtime, you get a fully managed environment where Claude can read files, run commands, browse the web, and execute code securely. The harness supports built in prompt caching, compaction, and other performance optimizations for high quality, efficient agent outputs.
+Managed Agents gives Claude access to a managed container where it can read files, run commands, browse the web, and execute code securely. The harness also includes prompt caching, compaction, and session persistence to keep long-running work practical.
 
 ## Core concepts
 
-Claude Managed Agents is built around four concepts:
-
 | Concept | Description |
-|---------|-------------|
-| **Agent** | The model, system prompt, tools, MCP servers, and skills |
-| **Environment** | A configured container template (packages, network access) |
-| **Session** | A running agent instance within an environment, performing a specific task and generating outputs |
-| **Events** | Messages exchanged between your application and the agent (user turns, tool results, status updates) |
+| --- | --- |
+| Agent | The reusable definition: model, system prompt, tools, MCP servers, and skills |
+| Environment | The container template and network configuration |
+| Session | A running task instance tied to an agent and environment |
+| Events | Messages, tool activity, status changes, and errors streamed during execution |
 
 ## How it works
 
-1. **Create an agent**: Define the model, system prompt, tools, MCP servers, and skills. Create the agent once and reference it by ID across sessions.
-2. **Create an environment**: Configure a cloud container with pre-installed packages (Python, Node.js, Go, etc.), network access rules, and mounted files.
-3. **Start a session**: Launch a session that references your agent and environment configuration.
-4. **Send events and stream responses**: Send user messages as events. Claude autonomously executes tools and streams back results via server-sent events (SSE).
-5. **Steer or interrupt**: Send additional user events to guide the agent mid-execution, or interrupt it to change direction.
+1. Create an agent with its model, tools, MCP servers, and skills.
+2. Create an environment that defines the container and network access.
+3. Start a session that references the agent and environment.
+4. Send user events and consume streamed events over SSE.
+5. Steer, interrupt, or resume work as the session changes state.
 
-## When to use Claude Managed Agents
+## When to use it
 
-- **Long-running execution** - Tasks that run for minutes or hours with multiple tool calls
-- **Cloud infrastructure** - Secure containers with pre-installed packages and network access
-- **Minimal infrastructure** - No need to build your own agent loop, sandbox, or tool execution layer
-- **Stateful sessions** - Persistent file systems and conversation history across multiple interactions
+Claude Managed Agents is best when you need:
+
+- Long-running execution with multiple tool calls.
+- Managed cloud infrastructure instead of self-hosted sandboxes.
+- Persistent sessions and filesystems across interactions.
+- Low orchestration overhead for agent workflows.
+
+## Built-in tool coverage
+
+The default `agent_toolset_20260401` exposes:
+
+- `bash`
+- `read`
+- `write`
+- `edit`
+- `glob`
+- `grep`
+- `web_fetch`
+- `web_search`
+
+You can combine the built-in toolset with MCP toolsets and custom tools.
+
+## Beta requirements
+
+All Managed Agents endpoints currently require the `managed-agents-2026-04-01` beta header. Official SDKs apply this automatically. Raw HTTP calls must set it explicitly.
+
+## Rate limits
+
+| Operation | Limit |
+| --- | --- |
+| Create endpoints | 60 requests per minute |
+| Read endpoints | 600 requests per minute |
+
+Organization-level spend limits and tier-based API limits still apply.
+
+## Branding guidance
+
+If you are embedding Claude Managed Agents into your own product, keep your product branding separate. Use names like `Claude Agent`, `Claude`, or `{YourAgentName} Powered by Claude` when appropriate, and do not make your product appear to be Claude Code or another Anthropic product.
+
+## Local companion docs
+
+- `getting_started.md`
+- `define_your_agent.md`
+- `tools.md`
+- `mcp_connector.md`
+- `skills.md`
+- `container_reference.md`
+- `reduce_hallucinations.md`
