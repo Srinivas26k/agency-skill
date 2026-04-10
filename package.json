@@ -1,10 +1,10 @@
 {
   "name": "agency-designer-skill",
-  "version": "2.0.0",
-  "description": "A cross-platform skill and agent toolkit for premium product design, managed runtimes, and AI IDE workflows.",
+  "version": "2.0.1",
+  "description": "A cross-platform agency framework and skill toolkit for frontend execution, managed agents, and multi-model AI IDE workflows.",
   "main": "index.js",
   "bin": {
-    "agency-designer": "./bin/cli.js"
+    "agency-designer": "bin/cli.js"
   },
   "scripts": {
     "test": "node tests/basic-rubric.test.js",
@@ -15,9 +15,13 @@
   },
   "keywords": [
     "ai",
+    "agency-framework",
+    "frontend-agency",
+    "agent-orchestration",
     "design-system",
     "premium-ui",
     "managed-agents",
+    "multi-model",
     "mcp",
     "cursor",
     "claude-code",
