@@ -1,0 +1,5 @@
+{
+  "versionFile": "package.json",
+  "commitMessage": "chore(release): bump version to %s",
+  "tagPrefix": "v"
+}

@@ -1,68 +1,96 @@
-# 💎 Agency Designer Skill
-**The Elite Agency-Grade Design System for AI-Assisted Development.**
+# Agency Designer Skill
+
+The Elite Agency-Grade Design System for AI-Assisted Development.
+
+Created by Srinivas Nampalli
+Standardizing High-Tier Visuals for a New Era of AI Coding.
 
 ---
 
-### Created by [Srinivas Nampalli](github.com/Srinivas26k/)
-**Standardizing S-Tier Visuals for a New Era of AI Coding.**
-
----
-
-[![NPM Version](https://img.shields.io/npm/v/agency-designer-skill?color=magenta&style=flat-square)](https://www.npmjs.com/package/agency-designer-skill)
+[![NPM Version](https://img.shields.io/npm/v/agency-designer-skill?color=blue&style=flat-square)](https://www.npmjs.com/package/agency-designer-skill)
 [![License](https://img.shields.io/badge/license-MIT-blue?style=flat-square)](LICENSE)
-[![Brand](https://img.shields.io/badge/Brand-Agency_Designer-white?style=flat-square&labelColor=black)](https://github.com/srinivas-nampalli)
 
-> "Stop building generic websites. Start building masterpieces."
+Stop building generic websites. Start building masterpieces.
 
-## 🚀 What is Agency Designer?
-**Agency Designer** is a specialized procedural knowledge layer (Skill) that transforms any AI Coding Assistant (Cursor, Claude Code, Windsurf, Trae) into a High-End Agency Design Partner. 
+## Overview
 
-It injects a decade of premium design standards, marketing psychology, and motion choreography directly into the AI's cognitive loop.
+**Agency Designer Skill** is a specialized procedural knowledge layer and design system that transforms AI coding assistants—including Cursor, Claude Code, Windsurf, Trae, and Gemini—into high-end agency design partners. 
 
-### ✨ Core Pillars
-- **Viral Aesthetics**: Automatically applies glassmorphism, aurora gradients, and grain textures.
-- **Premium Imagery**: Integrated sourcing from Unsplash & Pexels with automated CSS "Veneer" treatments.
-- **Conversion Thinking**: Rewrites your AI's copy to follow high-converting marketing frameworks (PAS, AIDA).
-- **Cinematic Motion**: Implements GSAP, Framer Motion, and Anime.js by default.
-- **Universal AI Support**: Optimized for Claude Code, Cursor, Windsurf, Qwen, and Antigravity.
+It injects premium design standards, marketing psychology, and motion choreography directly into the artificial intelligence's cognitive workflow, enabling automated generation of conversion-ready, aesthetic user interfaces.
 
----
+## Core Capabilities
 
-## 🛠 Installation
+- **High-Fidelity Aesthetics**: Automatically applies modern UI treatments, including glassmorphism, aurora gradients, and refined grain textures.
+- **Premium Imagery Integration**: Automated sourcing and CSS processing for highly professional image integration using platforms like Unsplash and Pexels.
+- **Conversion-Driven Architecture**: Rewrites and structures copy following proven marketing frameworks, such as PAS and AIDA, to ensure interfaces engage and convert.
+- **Cinematic Motion Design**: Natively implements advanced animation libraries including GSAP, Framer Motion, and Anime.js.
+- **Universal IDE Support**: Designed to function seamlessly across AI IDE extensions like Claude, Cursor, Windsurf, Qwen, and Antigravity.
 
-### via Terminal (NPX)
-Bootstrap any project in seconds:
+## Installation
+
+### Via Node Package Manager (NPX)
+Bootstrap the design system into any project rapidly:
 ```bash
 npx agency-designer-skill init
 ```
 
-### via Skills Registry
-Add this skill to your global environment:
+### Via Skills Registry
+Add this procedural skill to your global ecosystem:
 ```bash
 npx skills add srinivas-nampalli/agency-designer-skill
 ```
 
----
+## Repository Structure
 
-## 🎮 Designer Slash Commands
-When using an AI IDE, trigger these commands to bypass MVP-level outputs:
+The architecture of this repository strictly adheres to standard open-source AI plugin guidelines.
 
-- `/design [1-100]` — Apply a specific graphic style.
-- `/animate [type]` — Add GSAP/Framer motion.
-- `/imagery [mood]` — Source premium images + CSS Branding.
-- `/palette [emotion]` — Generate a psychology-backed color theme.
-- `/evaluate` — Run the 50-point Agency Designer Quality Rubric.
+```text
+.
+├── .claude-plugin/      # IDE-specific integrations for Claude Code
+├── .codex/              # Rulesets for Codex environments
+├── .cursor-plugin/      # IDE-specific integrations for Cursor
+├── .github/             # GitHub workflow automations and issue templates
+├── .opencode/           # OpenCode integrations
+├── agents/              # Orchestration logic for various AI subagents
+├── commands/            # Implementation of the conversational slash commands
+├── docs/                # Comprehensive documentation
+├── hooks/               # Git and system hooks for workflow maintenance
+├── scripts/             # Utility scripts for initialization and publishing
+├── skills/              # Core business logic (animations, styling, psychology)
+├── tests/               # Validation suite for the design system components
+├── AGENTS.md            # Directory index and instructions for AI agents
+├── CODE_OF_CONDUCT.md   # Guidelines for community participation
+├── CHANGELOG.md         # Version history tracking
+├── GEMINI.md            # Specific integration instructions for Gemini
+└── RELEASE-NOTES.md     # Detailed patch and minor update notes
+```
 
----
+## AI Agent Slash Commands
 
-## 📖 The Agency Designer Quality Gate
-Every output must pass the standard set by Srinivas Nampalli:
-1. **Typography**: Character-rich display fonts (No generic Sans).
-2. **Color**: No flat solids; HSL-based tints and atmospheric depth.
-3. **Motion**: ScrollTrigger narratives and stagger entrances.
-4. **Marketing**: Headlines must promise a result [without PAIN].
+When utilizing a supported AI IDE, you can trigger these directives to bypass generic component generation:
 
----
+- `/design [1-100]` — Apply a specific graphic style from the repository.
+- `/animate [type]` — Inject advanced GSAP or Framer motion sequences.
+- `/imagery [mood]` — Source premium visual assets with CSS branding overlays.
+- `/palette [emotion]` — Generate psychology-backed color themes and CSS variables.
+- `/evaluate` — Run the rigorous 50-point Agency Designer Quality Rubric assessment.
 
-## 📄 License
-MIT © [Srinivas Nampalli](LICENSE)
+## The Agency Designer Quality Gate
+
+Every interface component produced under this skill is rigorously evaluated against specific standards:
+1. **Typography**: Enforces character-rich display fonts and avoids basic system default fonts.
+2. **Color Architecture**: Discards flat primary colors in favor of HSL-based palettes with atmospheric depth and dynamic lighting.
+3. **Motion Systems**: Mandates ScrollTrigger narratives, stagger entrances, and kinetic typography.
+4. **Marketing Nuance**: Requires headlines and subtext to promise clear outcomes using advanced copywriting psychology.
+
+## Contributing
+
+We welcome contributions that push the boundaries of AI-assisted UI/UX design.
+
+1. Review the `CODE_OF_CONDUCT.md`.
+2. Ensure you are familiar with the 50-point Quality Gate.
+3. Branch from main, submit a detailed Pull Request, and include visual demonstrations for any CSS or motion logic modifications.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

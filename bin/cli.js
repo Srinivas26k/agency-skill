@@ -27,30 +27,29 @@ program
     const targetDir = path.resolve(process.cwd(), dir);
     const sourceDir = path.resolve(__dirname, '..');
 
-    // Files to copy
+    // Files/Folders to copy during initialization
     const filesToCopy = [
-      'SKILL.md',
-      '.cursorrules',
-      'CLAUDE.md',
-      'AGENCY_DESIGNER.md',
-      'core',
-      'agents',
-      'commands',
-      'animations',
-      'psychology',
-      'styles',
-      'core/PREMIUM_IMAGERY.md'
+      { src: 'skills/agency-designer/SKILL.md', dest: 'SKILL.md' },
+      { src: '.cursorrules', dest: '.cursorrules' },
+      { src: '.claude-plugin/instructions.md', dest: 'CLAUDE.md' },
+      { src: 'docs/AGENCY_DESIGNER.md', dest: 'AGENCY_DESIGNER.md' },
+      { src: 'skills/agency-designer/resources/core', dest: 'core' },
+      { src: 'agents', dest: 'agents' },
+      { src: 'skills/agency-designer/resources/commands', dest: 'commands' },
+      { src: 'skills/agency-designer/resources/animations', dest: 'animations' },
+      { src: 'skills/agency-designer/resources/psychology', dest: 'psychology' },
+      { src: 'skills/agency-designer/resources/styles', dest: 'styles' }
     ];
 
     try {
       await fs.ensureDir(targetDir);
 
-      for (const file of filesToCopy) {
-        const src = path.join(sourceDir, file);
-        const dest = path.join(targetDir, file);
+      for (const item of filesToCopy) {
+        const src = path.join(sourceDir, item.src);
+        const dest = path.join(targetDir, item.dest);
 
         if (await fs.pathExists(src)) {
-          console.log(`  ${chalk.green('✔')} Copying ${file}...`);
+          console.log(`  ${chalk.green('✔')} Copying ${item.dest}...`);
           await fs.copy(src, dest);
         }
       }

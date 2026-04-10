@@ -1,0 +1,5 @@
+* text=auto
+
+*.json linguist-language=JSON
+*.md linguist-language=Markdown
+*.js linguist-language=JavaScript
