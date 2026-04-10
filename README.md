@@ -80,7 +80,13 @@ npx agency-designer-skill init
 Add the skill from the registry:
 
 ```bash
-npx skills add srinivas-nampalli/agency-designer-skill
+npx skills add Srinivas26k/agency-skill
+```
+
+To preview skills before installing:
+
+```bash
+npx skills add Srinivas26k/agency-skill -l
 ```
 
 ### Local Repository Setup
