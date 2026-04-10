@@ -7,7 +7,7 @@ Built for modern AI editors, coding agents, managed execution environments, and 
 
 ---
 
-[![NPM Version](https://img.shields.io/npm/v/agency-designer-skill?color=blue&style=flat-square)](https://www.npmjs.com/package/agency-designer-skill)
+[![NPM Version](https://img.shields.io/npm/v/agency-skill?color=blue&style=flat-square)](https://www.npmjs.com/package/agency-skill)
 [![License](https://img.shields.io/badge/license-MIT-blue?style=flat-square)](LICENSE)
 
 Agency Designer is designed to act like an agency acceleration layer for AI. It gives AI systems stronger frontend taste, better execution patterns, clearer runtime guidance, and tighter context efficiency.
@@ -67,12 +67,14 @@ Key docs:
 
 ## Installation
 
+This project now uses one canonical public name: `agency-skill`.
+
 ### Via NPX
 
 Bootstrap the starter kit into any project:
 
 ```bash
-npx agency-designer-skill init
+npx agency-skill init
 ```
 
 ### Via Skills Registry

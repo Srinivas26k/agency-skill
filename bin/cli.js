@@ -10,7 +10,7 @@ const BRAND = 'Agency Designer Skill';
 const AUTHOR = 'by Srinivas Nampalli';
 
 program
-  .name('agency-designer')
+  .name('agency-skill')
   .description('The elite agency-grade design system for AI-assisted development.')
   .version('2.0.0');
 
@@ -44,6 +44,16 @@ program
       for (const item of filesToCopy) {
         const src = path.join(sourceDir, item.src);
         const dest = path.join(targetDir, item.dest);
+
+        if (path.resolve(src) === path.resolve(dest)) {
+          console.log(`  [skip] ${item.dest} already points to source in this repository.`);
+          continue;
+        }
+
+        if (await fs.pathExists(dest)) {
+          console.log(`  [skip] ${item.dest} already exists in target. Keeping existing file/folder.`);
+          continue;
+        }
 
         if (await fs.pathExists(src)) {
           console.log(`  [ok] Copying ${item.dest}...`);

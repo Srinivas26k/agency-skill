@@ -1,9 +1,10 @@
 {
-  "name": "agency-designer-skill",
+  "name": "agency-skill",
   "version": "2.0.2",
   "description": "A cross-platform agency framework and skill toolkit for frontend execution, managed agents, and multi-model AI IDE workflows.",
   "main": "index.js",
   "bin": {
+    "agency-skill": "bin/cli.js",
     "agency-designer": "bin/cli.js"
   },
   "scripts": {
@@ -33,7 +34,7 @@
     "marketing",
     "ux",
     "srinivas-nampalli",
-    "agency-designer-skill"
+    "agency-skill"
   ],
   "author": {
     "name": "Srinivas Nampalli",
