@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-10T06:46:16.235Z",
+  "generatedAt": "2026-04-10T06:51:18.693Z",
   "description": "Graph-oriented context map for Agency Designer. Use connected nodes instead of flat repo-wide indexing to reduce context load.",
   "nodes": [
     {
