@@ -3,7 +3,7 @@
   "brand": "Agency Designer",
   "version": "2.0.1",
   "author": "Srinivas Nampalli",
-  "description": "High-performance cross-platform skill pack for premium design, agent orchestration, and AI IDE workflows.",
+  "description": "Cross-platform agency framework for frontend execution, managed agents, and multi-model AI workflows.",
   "platforms": [
     "antigravity",
     "cursor",
@@ -17,10 +17,10 @@
     "qwen",
     "vscode"
   ],
-  "main_instruction": "SKILL.md",
+  "main_instruction": "skills/agency-designer/SKILL.md",
   "rules": [
     ".cursorrules",
-    "CLAUDE.md",
-    "AGENCY_DESIGNER.md"
+    ".claude-plugin/instructions.md",
+    "docs/AGENCY_DESIGNER.md"
   ]
 }
