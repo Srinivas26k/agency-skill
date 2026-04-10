@@ -54,6 +54,18 @@ The default `agent_toolset_20260401` exposes:
 
 You can combine the built-in toolset with MCP toolsets and custom tools.
 
+## Connecting other models
+
+Managed Agents does not need to be the only model runtime in your stack. A practical pattern is to use Claude as the orchestrator and connect other models through tools.
+
+Common options:
+
+1. Custom tools that call your own model gateway.
+2. MCP servers that expose model-routing operations.
+3. External services that Claude invokes for specialized generation, ranking, or transformation.
+
+That lets one managed agent coordinate work across multiple providers while still keeping a single session and tool history.
+
 ## Beta requirements
 
 All Managed Agents endpoints currently require the `managed-agents-2026-04-01` beta header. Official SDKs apply this automatically. Raw HTTP calls must set it explicitly.

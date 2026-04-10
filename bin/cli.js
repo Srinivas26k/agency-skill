@@ -3,12 +3,11 @@
 const { Command } = require('commander');
 const fs = require('fs-extra');
 const path = require('path');
-const chalk = require('chalk');
 
 const program = new Command();
 
-const BRAND = chalk.bold.magenta('Agency Designer Skill');
-const AUTHOR = chalk.dim('by Srinivas Nampalli');
+const BRAND = 'Agency Designer Skill';
+const AUTHOR = 'by Srinivas Nampalli';
 
 program
   .name('agency-designer')
@@ -20,7 +19,7 @@ program
   .description('Bootstrap your project with Agency Designer rules and assets.')
   .argument('[dir]', 'Project directory', '.')
   .action(async (dir) => {
-    console.log(`\n🚀 Initializing ${BRAND} ${AUTHOR} in ${chalk.blue(dir)}...\n`);
+    console.log(`\nInitializing ${BRAND} ${AUTHOR} in ${dir}...\n`);
 
     const targetDir = path.resolve(process.cwd(), dir);
     const sourceDir = path.resolve(__dirname, '..');
@@ -47,19 +46,19 @@ program
         const dest = path.join(targetDir, item.dest);
 
         if (await fs.pathExists(src)) {
-          console.log(`  ${chalk.green('✔')} Copying ${item.dest}...`);
+          console.log(`  [ok] Copying ${item.dest}...`);
           await fs.copy(src, dest);
         }
       }
 
-      console.log(`\n✨ ${BRAND} successfully initialized!`);
-      console.log(`\n${chalk.bold('Next Steps:')}`);
-      console.log(`1. Open this folder in ${chalk.cyan('Cursor')}, ${chalk.cyan('VS Code')}, ${chalk.cyan('Copilot')}, ${chalk.cyan('Kiro')}, or ${chalk.cyan('Windsurf')}.`);
+      console.log(`\n${BRAND} successfully initialized.`);
+      console.log(`\nNext steps:`);
+      console.log(`1. Open this folder in Cursor, VS Code with Copilot, Kiro, Windsurf, Goose, or another supported IDE.`);
       console.log(`2. Load the local rules, skill files, or managed-agent docs for your platform.`);
-      console.log(`3. Trigger your AI with ${chalk.magenta('/design')}, ${chalk.magenta('/animate')}, or a platform-specific agent workflow.\n`);
+      console.log(`3. Trigger your AI with /design, /animate, or a platform-specific agent workflow.\n`);
 
     } catch (err) {
-      console.error(chalk.red('\n✖ Error during initialization:'), err.message);
+      console.error('\nError during initialization:', err.message);
     }
   });
 
@@ -67,9 +66,9 @@ program
   .command('audit')
   .description('Audit your project against the Agency Designer Premium Rubric.')
   .action(() => {
-    console.log(`\n🛡 Running ${BRAND} quality audit...\n`);
-    console.log(chalk.yellow('  Coming soon: Full automated project scanning.'));
-    console.log(`  For now, use ${chalk.bold('/evaluate')} within your AI IDE.\n`);
+    console.log(`\nRunning ${BRAND} quality audit...\n`);
+    console.log('  Coming soon: full automated project scanning.');
+    console.log('  For now, use /evaluate within your AI IDE.\n');
   });
 
 program.parse();

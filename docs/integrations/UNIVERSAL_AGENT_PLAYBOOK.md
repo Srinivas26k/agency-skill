@@ -45,6 +45,24 @@ When a platform wraps Claude, Gemini, Copilot, or another provider, do not renam
 3. Normalize tool and MCP guidance so it can be translated between vendors.
 4. Keep universal docs current before deepening any single-provider branch.
 
+## Managed Agents as an orchestrator, not a lock-in layer
+
+Claude Managed Agents should be treated as one orchestration runtime, not as the only supported model environment.
+
+Recommended architecture:
+
+1. Let Claude Managed Agents handle planning, tool use, state management, and execution flow.
+2. Connect other model providers through custom tools or MCP servers.
+3. Keep prompts, skill files, and graph nodes vendor-neutral so they can be reused in Copilot, Cursor, Goose, Gemini, Kiro, or direct local agents.
+
+Examples of multi-model connections:
+
+- A custom tool such as `route_generation_request` that forwards work to Gemini or another provider.
+- An MCP server that exposes `generate_with_openai`, `generate_with_gemini`, or `rank_with_local_model`.
+- A local IDE adapter that loads the same skill corpus directly without Claude in the loop.
+
+The core rule is simple: do not bury model-specific assumptions inside the canonical skill.
+
 ## What this means for this repository
 
 The design material remains the premium creative core, but the repo should also document:
