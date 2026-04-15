@@ -1,247 +1,135 @@
 # Agency Designer Skill
 
-A cross-platform skill and agent toolkit for agency-grade frontend execution, managed runtimes, and AI IDE workflows.
+Agency Designer is a cross-platform skill pack for teams who want better AI output in three areas:
 
-Created by Srinivas Nampalli
-Built for modern AI editors, coding agents, managed execution environments, and reusable workflow packaging.
+- premium web design
+- production-grade agent design
+- structured marketing copy
 
----
+It gives your AI workflows stronger taste, better planning, and more reusable execution patterns across Claude, Copilot, Cursor, Gemini, and similar environments.
 
 [![NPM Version](https://img.shields.io/npm/v/agency-skill?color=blue&style=flat-square)](https://www.npmjs.com/package/agency-skill)
 [![License](https://img.shields.io/badge/license-MIT-blue?style=flat-square)](LICENSE)
 
-Agency Designer is designed to act like an agency acceleration layer for AI. It gives AI systems stronger frontend taste, better execution patterns, clearer runtime guidance, and tighter context efficiency.
+## What You Get
 
-## Overview
+- `/web-design` for high-quality UI direction, layout planning, motion, and implementation guidance
+- `/agents-make` for building real agent systems with clear contracts, tool boundaries, and Anthropic-style agent structure
+- `/marketing-pro` for landing page copy, positioning, messaging, and CTA refinement
+- reusable role docs under `agents/`
+- integration guides for Anthropic Managed Agents, MCP, Gemini, and multi-runtime workflows
 
-**Agency Designer Skill** began as a premium UI and UX skill pack. It is now expanding into a broader toolkit for:
+## Why Use It
 
-- beautiful frontend execution,
-- agent orchestration,
-- managed runtime design,
-- MCP and tool integration,
-- graph-based knowledge packaging.
+Most AI workflows break in predictable ways: generic design, weak orchestration, bloated prompts, and vague agent definitions.
 
-The repository is structured so one shared core can be reused across GitHub Copilot, Claude Managed Agents, Claude Code, Cursor, Kiro, Goose, Gemini, Antigravity, Windsurf, and similar environments without duplicating the entire knowledge base.
+Agency Designer fixes that by pushing the workflow toward:
 
-## What It Adds To AI
+- stronger visual direction
+- better decomposition of work
+- narrower and safer tool usage
+- reusable skill-based context instead of one giant prompt
+- clearer agent definitions for managed runtimes
 
-Most AI systems fail in one of two ways:
+## Install
 
-1. They produce generic design because they lack a strong creative system.
-2. They waste context because they load too much flat, unstructured documentation.
-
-Agency Designer addresses both problems. It upgrades visual and strategic quality while organizing the knowledge base into reusable, graph-friendly units.
-
-## Core Capabilities
-
-- **Premium design system**: High-end UI direction, typography, color psychology, imagery, and motion patterns.
-- **Agency-grade frontend output**: Better landing pages, component systems, interaction design, and conversion-aware structure.
-- **Agent orchestration**: Reusable planning, delegation, quality gates, and workflow structure.
-- **Managed runtime support**: Documentation for Claude Managed Agents, environments, tools, MCP, skills, and sessions.
-- **Cross-platform adapters**: Guidance for GitHub Copilot, Claude Code, Claude Managed Agents, Cursor, Kiro, Goose, Gemini, Antigravity, Windsurf, Codex-style local agents, and VS Code-based workflows.
-- **Graph-based context compression**: Knowledge graph generation so agents can load connected concepts instead of scanning the whole repo.
-
-## Managed Agents and Multi-Model Routing
-
-Claude Managed Agents is an important runtime in this repository, but it is not the only target and it should not be treated as a lock-in layer.
-
-Recommended architecture:
-
-1. Use Claude Managed Agents as the orchestration runtime when you want long-running tasks, hosted tools, persistent sessions, and strong MCP support.
-2. Connect other model providers through custom tools or MCP servers.
-3. Reuse the same core skill files directly in Copilot, Cursor, Goose, Kiro, Gemini, or other platforms when Claude orchestration is not needed.
-
-Typical ways to connect other models:
-
-1. **Custom tools**: expose a backend tool such as `generate_with_model` or `route_generation_request` and call Gemini, OpenAI, xAI, or another provider from your own infrastructure.
-2. **MCP servers**: expose model-routing tools over MCP and let the managed agent call them as needed.
-3. **Direct adapters**: load the same core skill in a different IDE or runtime without going through Claude.
-
-Key docs:
-
-- [docs/integrations/anthropic/managed_agents_overview.md](docs/integrations/anthropic/managed_agents_overview.md)
-- [docs/integrations/anthropic/mcp_connector.md](docs/integrations/anthropic/mcp_connector.md)
-- [docs/integrations/MANAGED_AGENTS_AND_MODEL_ROUTING.md](docs/integrations/MANAGED_AGENTS_AND_MODEL_ROUTING.md)
-- [docs/integrations/UNIVERSAL_AGENT_PLAYBOOK.md](docs/integrations/UNIVERSAL_AGENT_PLAYBOOK.md)
-
-## Installation
-
-### Via NPX (bootstrap into any project)
+### NPX
 
 ```bash
 npx agency-skill init
 ```
 
-Copies into your project: `CLAUDE.md`, `GEMINI.md`, `.cursorrules`, `.claude/commands/` (slash commands), `agents/`, and design resources.
-
-### Via Skills Registry
+### Skills Registry
 
 ```bash
 skills install agency-skill
 ```
 
-### Via NPM
+### NPM
 
 ```bash
 npm install agency-skill
 ```
 
-## Commands
+## Main Commands
 
-| Command | What it does |
+| Command | Use it for |
 |---|---|
-| `/web-design` | Full design workflow: brief → agents → plan → execute → generates `design.md` |
-| `/agents-make` | Build AI agent systems: single agent, pipeline, or director tree |
-| `/marketing-pro` | Conversion copy: headlines, CTAs, full rewrite, audit |
+| `/web-design` | Turn a vague product brief into stronger UI, layout, motion, and implementation direction |
+| `/agents-make` | Design a single agent, pipeline, or director tree with production-grade contracts |
+| `/marketing-pro` | Write or refine headlines, CTA systems, and conversion-focused page copy |
 
-Each command interrogates your brief one question at a time, selects the right agents, presents a numbered implementation plan, and waits for your approval before executing.
+## /agents-make Now Follows Anthropic-Style Agent Design
 
-## Supported Platforms
+`/agents-make` is not just an agent brainstorming prompt.
+
+It now expects an agent system to be defined with the same level of seriousness used in Anthropic Managed Agents documentation:
+
+- agent name
+- model choice
+- system prompt
+- tools
+- MCP servers if needed
+- attached skills if needed
+- callable agents if orchestration is needed
+- environment assumptions
+- session plan
+- quality gates
+
+That means a user can use `/agents-make` to move from an idea to a reusable agent definition instead of getting a loose paragraph about "how an agent might work."
+
+## Anthropic Docs Included
+
+If you want to build agents with Managed Agents-style structure, start here:
+
+- [docs/integrations/anthropic/managed_agents_overview.md](docs/integrations/anthropic/managed_agents_overview.md)
+- [docs/integrations/anthropic/define_your_agent.md](docs/integrations/anthropic/define_your_agent.md)
+- [docs/integrations/anthropic/tools.md](docs/integrations/anthropic/tools.md)
+- [docs/integrations/anthropic/mcp_connector.md](docs/integrations/anthropic/mcp_connector.md)
+- [docs/integrations/anthropic/skills.md](docs/integrations/anthropic/skills.md)
+- [docs/integrations/anthropic/container_reference.md](docs/integrations/anthropic/container_reference.md)
+
+These docs are included so users can design agents with a proper runtime model, not just prompt wording.
+
+## Supported Environments
 
 - Claude Managed Agents
 - Claude Code
-- GitHub Copilot and VS Code
+- GitHub Copilot
+- VS Code agent workflows
 - Cursor
-- Kiro
-- Goose
 - Gemini
-- Antigravity
+- Goose
+- Kiro
 - Windsurf
-- Codex-style local agent workflows
+- custom agent runtimes
 
-## Knowledge Graph Architecture
+## Typical Workflow
 
-This repository includes a graph-generation step to reduce context waste.
+1. Install the skill in your project.
+2. Use `/web-design`, `/agents-make`, or `/marketing-pro` depending on the task.
+3. Answer the brief questions.
+4. Review the proposed system design or plan.
+5. Let the agent execute with the right files, tools, and docs in scope.
 
-Instead of relying only on flat indexing, the graph maps:
+## Repository Layout
 
-- documents to concepts,
-- concepts to platforms,
-- concepts to workflows,
-- concepts to runtime capabilities.
+If you want to extend or inspect the package:
 
-Generated file:
+- `skills/` contains the core skill files
+- `commands/` contains slash-command behavior
+- `agents/` contains reusable role definitions
+- `docs/integrations/` contains runtime-specific guidance
+- `scripts/` contains validation and graph tooling
 
-- [skills/agency-designer/knowledge-graph.json](skills/agency-designer/knowledge-graph.json)
-
-Build it locally with:
+## Development
 
 ```bash
+npm test
+npm run validate:docs
 npm run build:graph
 ```
 
-The intent is to let an agent start from a task node and walk only the nearest supporting documents, reducing context window usage and keeping runtime selection more efficient.
-
-## Repository Structure
-
-The repository separates canonical skill content from runtime-specific adapters.
-
-```text
-.
-├── .claude-plugin/      # Claude Code-specific local instruction files
-├── .codex/              # Codex-style adapter notes
-├── .cursor-plugin/      # Cursor-specific configuration
-├── .github/             # GitHub Copilot repository instructions
-├── .opencode/           # OpenCode integration notes
-├── agents/              # Agent orchestration docs and patterns
-├── docs/                # Integration and publishing documentation
-│   ├── integrations/
-│   │   ├── GEMINI.md
-│   │   ├── MANAGED_AGENTS_AND_MODEL_ROUTING.md
-│   │   ├── UNIVERSAL_AGENT_PLAYBOOK.md
-│   │   └── anthropic/
-│   │       ├── container_reference.md
-│   │       ├── define_your_agent.md
-│   │       ├── getting_started.md
-│   │       ├── managed_agents_overview.md
-│   │       ├── mcp_connector.md
-│   │       ├── reduce_hallucinations.md
-│   │       ├── skills.md
-│   │       └── tools.md
-├── hooks/               # Git hooks for validation and graph refresh
-├── scripts/             # Installation, validation, and graph-generation scripts
-├── skills/              # Canonical skill corpus, packaged resources, and exports
-├── tests/               # Validation suite for the quality rubric
-├── CODE_OF_CONDUCT.md
-├── CHANGELOG.md
-└── RELEASE-NOTES.md
-```
-
-## Universal Packaging Model
-
-This repository treats platform support as an adapter layer:
-
-1. Core skill knowledge lives under `skills/agency-designer/`.
-2. Agent orchestration patterns live under `agents/`.
-3. Runtime and platform notes live under `docs/integrations/`.
-4. GitHub Copilot-specific repository guidance lives under `.github/`.
-5. The CLI projects the shared system into consumer repos without changing the canonical source.
-
-That means the same design and workflow logic can be reused in a managed cloud agent, a local IDE assistant, or a skill registry installation.
-
-## Hooks and Scripts
-
-Relevant local automation included in this repository:
-
-- `scripts/install.sh`: bootstrap dependencies, hooks, graph output, and docs validation.
-- `scripts/install-hooks.sh`: install repository hooks into `.git/hooks`.
-- `scripts/build-knowledge-graph.js`: generate the graph-oriented context file.
-- `scripts/validate-docs.js`: validate that critical documentation assets exist.
-- `hooks/pre-commit.sh`: run tests, doc validation, and graph generation before commit.
-- `hooks/post-merge.sh`: rebuild the graph and revalidate docs after merges.
-
-## GitHub Copilot Support
-
-This repository uses `.github` for Copilot-related guidance rather than CI pipelines.
-
-Primary file:
-
-- [.github/copilot-instructions.md](.github/copilot-instructions.md)
-
-The goal is to keep repository-level Copilot behavior aligned with the shared skill corpus instead of adding unrelated workflow automation.
-
-## AI Agent Slash Commands
-
-When a host platform supports slash-style workflows, these commands can be used to bypass generic component generation:
-
-- `/design [1-100]`
-- `/animate [type]`
-- `/imagery [mood]`
-- `/palette [emotion]`
-- `/evaluate`
-
-## Quality Gate
-
-Every interface component produced under this skill is expected to clear a consistent quality threshold:
-
-1. **Typography**: Character-rich display fonts over default system combinations.
-2. **Color architecture**: HSL-based, emotionally intentional palettes with depth.
-3. **Motion systems**: Deliberate motion language, not decorative filler.
-4. **Marketing nuance**: Headlines and CTAs that promise clear value.
-
-## Anthropic Managed Agent Coverage
-
-The Anthropic integration set currently covers:
-
-- Managed Agents overview and positioning
-- Agent creation and lifecycle
-- Environment and session setup
-- Tool configuration and custom tools
-- MCP connector patterns
-- Skill attachment
-- Cloud container reference
-- Hallucination reduction guidance
-
-## Contributing
-
-Contributions should improve the shared core or add clearly scoped platform adapters.
-
-1. Review [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
-2. Keep platform-specific behavior out of the canonical core unless it is broadly reusable.
-3. Update integration docs when runtime assumptions change.
-4. Prefer focused pull requests with concrete examples.
-
 ## License
 
-This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
+MIT. See [LICENSE](LICENSE).

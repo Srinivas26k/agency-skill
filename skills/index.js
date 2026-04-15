@@ -5,7 +5,7 @@
  */
 
 module.exports = {
-  name: "agency-designer-skill",
+  name: "agency-skill",
   version: "2.0.0",
   type: "procedural-knowledge-graph"
 };
