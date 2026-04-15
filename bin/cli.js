@@ -6,36 +6,38 @@ const path = require('path');
 
 const program = new Command();
 
-const BRAND = 'Agency Designer Skill';
+const BRAND = 'Agency Designer';
 const AUTHOR = 'by Srinivas Nampalli';
 
 program
   .name('agency-skill')
-  .description('The elite agency-grade design system for AI-assisted development.')
-  .version('2.0.0');
+  .description('Agency Designer — premium UI/UX, agent orchestration, and marketing for AI IDEs.')
+  .version('2.0.2');
 
 program
   .command('init')
-  .description('Bootstrap your project with Agency Designer rules and assets.')
-  .argument('[dir]', 'Project directory', '.')
+  .description('Bootstrap your project with Agency Designer skill files.')
+  .argument('[dir]', 'Target directory', '.')
   .action(async (dir) => {
     console.log(`\nInitializing ${BRAND} ${AUTHOR} in ${dir}...\n`);
 
     const targetDir = path.resolve(process.cwd(), dir);
     const sourceDir = path.resolve(__dirname, '..');
 
-    // Files/Folders to copy during initialization
     const filesToCopy = [
-      { src: 'skills/agency-designer/SKILL.md', dest: 'SKILL.md' },
-      { src: '.cursorrules', dest: '.cursorrules' },
-      { src: '.claude-plugin/instructions.md', dest: 'CLAUDE.md' },
-      { src: 'docs/AGENCY_DESIGNER.md', dest: 'AGENCY_DESIGNER.md' },
-      { src: 'skills/agency-designer/resources/core', dest: 'core' },
-      { src: 'agents', dest: 'agents' },
-      { src: 'skills/agency-designer/resources/commands', dest: 'commands' },
-      { src: 'skills/agency-designer/resources/animations', dest: 'animations' },
-      { src: 'skills/agency-designer/resources/psychology', dest: 'psychology' },
-      { src: 'skills/agency-designer/resources/styles', dest: 'styles' }
+      // Core skill entry points
+      { src: 'skills/web-design/SKILL.md',      dest: 'SKILL.md' },
+      { src: 'CLAUDE.md',                        dest: 'CLAUDE.md' },
+      { src: 'GEMINI.md',                        dest: 'GEMINI.md' },
+      { src: '.cursorrules',                     dest: '.cursorrules' },
+      // Slash commands → .claude/commands/ for Claude Code native slash commands
+      { src: 'commands/web-design.md',           dest: '.claude/commands/web-design.md' },
+      { src: 'commands/agents-make.md',          dest: '.claude/commands/agents-make.md' },
+      { src: 'commands/marketing-pro.md',        dest: '.claude/commands/marketing-pro.md' },
+      // Agent definitions
+      { src: 'agents',                           dest: 'agents' },
+      // Design resource folder
+      { src: 'skills/web-design/resources',      dest: 'agency-designer/resources' },
     ];
 
     try {
@@ -46,39 +48,41 @@ program
         const dest = path.join(targetDir, item.dest);
 
         if (path.resolve(src) === path.resolve(dest)) {
-          console.log(`  [skip] ${item.dest} already points to source in this repository.`);
+          console.log(`  [skip] ${item.dest} — already in source repo`);
           continue;
         }
 
         if (await fs.pathExists(dest)) {
-          console.log(`  [skip] ${item.dest} already exists in target. Keeping existing file/folder.`);
+          console.log(`  [skip] ${item.dest} — already exists`);
           continue;
         }
 
         if (await fs.pathExists(src)) {
-          console.log(`  [ok] Copying ${item.dest}...`);
+          await fs.ensureDir(path.dirname(dest));
+          console.log(`  [ok]   ${item.dest}`);
           await fs.copy(src, dest);
+        } else {
+          console.log(`  [warn] ${item.src} not found — skipping`);
         }
       }
 
-      console.log(`\n${BRAND} successfully initialized.`);
-      console.log(`\nNext steps:`);
-      console.log(`1. Open this folder in Cursor, VS Code with Copilot, Kiro, Windsurf, Goose, or another supported IDE.`);
-      console.log(`2. Load the local rules, skill files, or managed-agent docs for your platform.`);
-      console.log(`3. Trigger your AI with /design, /animate, or a platform-specific agent workflow.\n`);
+      console.log(`\n${BRAND} initialized.\n`);
+      console.log(`Next steps:`);
+      console.log(`  1. Open in Claude Code, Cursor, Copilot, Gemini, or any supported IDE`);
+      console.log(`  2. Type /web-design, /agents-make, or /marketing-pro to activate a workflow\n`);
 
     } catch (err) {
-      console.error('\nError during initialization:', err.message);
+      console.error('\nError during init:', err.message);
+      process.exit(1);
     }
   });
 
 program
   .command('audit')
-  .description('Audit your project against the Agency Designer Premium Rubric.')
+  .description('Audit your project against Agency Designer Premium Standards.')
   .action(() => {
     console.log(`\nRunning ${BRAND} quality audit...\n`);
-    console.log('  Coming soon: full automated project scanning.');
-    console.log('  For now, use /evaluate within your AI IDE.\n');
+    console.log('  Use /web-design → @quality-auditor within your AI IDE for a full scored audit.\n');
   });
 
 program.parse();
