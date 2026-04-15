@@ -2,85 +2,33 @@ const fs = require('fs');
 const path = require('path');
 
 const repoRoot = path.resolve(__dirname, '..');
-const outputPath = path.join(repoRoot, 'skills', 'agency-designer', 'knowledge-graph.json');
+const outputPath = path.join(repoRoot, 'skills', 'web-design', 'knowledge-graph.json');
 
 const nodes = [
-  {
-    id: 'skill-core',
-    type: 'skill',
-    label: 'Agency Designer Core',
-    path: 'skills/agency-designer/SKILL.md',
-    tags: ['frontend', 'design-system', 'agency', 'ux']
-  },
-  {
-    id: 'agent-orchestration',
-    type: 'agent',
-    label: 'Agent Orchestration',
-    path: 'agents/AGENT.md',
-    tags: ['delegation', 'planning', 'quality-gates']
-  },
-  {
-    id: 'universal-playbook',
-    type: 'integration',
-    label: 'Universal Agent Playbook',
-    path: 'docs/integrations/UNIVERSAL_AGENT_PLAYBOOK.md',
-    tags: ['adapter-model', 'platforms', 'runtime']
-  },
-  {
-    id: 'managed-agents',
-    type: 'integration',
-    label: 'Claude Managed Agents',
-    path: 'docs/integrations/anthropic/managed_agents_overview.md',
-    tags: ['managed-runtime', 'anthropic', 'sessions', 'tools']
-  },
-  {
-    id: 'model-routing',
-    type: 'integration',
-    label: 'Managed Agents and Model Routing',
-    path: 'docs/integrations/MANAGED_AGENTS_AND_MODEL_ROUTING.md',
-    tags: ['multi-model', 'mcp', 'custom-tools', 'routing']
-  },
-  {
-    id: 'copilot-adapter',
-    type: 'platform',
-    label: 'GitHub Copilot Adapter',
-    path: '.github/copilot-instructions.md',
-    tags: ['copilot', 'vscode', 'repo-guidance']
-  },
-  {
-    id: 'gemini-adapter',
-    type: 'platform',
-    label: 'Gemini Adapter',
-    path: 'docs/integrations/GEMINI.md',
-    tags: ['gemini', 'adapter']
-  },
-  {
-    id: 'motion-library',
-    type: 'resource',
-    label: 'Motion Patterns',
-    path: 'skills/agency-designer/resources/animations/GSAP_ANIMATIONS.md',
-    tags: ['gsap', 'framer-motion', 'animejs', 'frontend']
-  },
-  {
-    id: 'color-psychology',
-    type: 'resource',
-    label: 'Color Psychology',
-    path: 'skills/agency-designer/resources/psychology/COLOR_PSYCHOLOGY.md',
-    tags: ['branding', 'palette', 'conversion']
-  }
+  { id: 'web-design-skill', type: 'skill', label: 'Web Design', path: 'skills/web-design/SKILL.md', tags: ['frontend', 'design-system', 'ux'] },
+  { id: 'agents-make-skill', type: 'skill', label: 'Agents Make', path: 'skills/agents-make/SKILL.md', tags: ['agents', 'orchestration', 'delegation'] },
+  { id: 'marketing-pro-skill', type: 'skill', label: 'Marketing Pro', path: 'skills/marketing-pro/SKILL.md', tags: ['marketing', 'copy', 'conversion'] },
+  { id: 'cmd-web-design', type: 'command', label: '/web-design', path: 'commands/web-design.md', tags: ['slash-command'] },
+  { id: 'cmd-agents-make', type: 'command', label: '/agents-make', path: 'commands/agents-make.md', tags: ['slash-command'] },
+  { id: 'cmd-marketing-pro', type: 'command', label: '/marketing-pro', path: 'commands/marketing-pro.md', tags: ['slash-command'] },
+  { id: 'visual-director', type: 'agent', label: 'Visual Director', path: 'agents/visual-director.md', tags: ['design', 'palette', 'typography'] },
+  { id: 'motion-engineer', type: 'agent', label: 'Motion Engineer', path: 'agents/motion-engineer.md', tags: ['gsap', 'animation', 'scroll'] },
+  { id: 'copy-strategist', type: 'agent', label: 'Copy Strategist', path: 'agents/copy-strategist.md', tags: ['copy', 'cta', 'headlines'] },
+  { id: 'quality-auditor', type: 'agent', label: 'Quality Auditor', path: 'agents/quality-auditor.md', tags: ['rubric', 'audit', 'quality'] },
+  { id: 'universal-playbook', type: 'integration', label: 'Universal Playbook', path: 'docs/integrations/UNIVERSAL_AGENT_PLAYBOOK.md', tags: ['platforms', 'adapters'] },
 ];
 
 const edges = [
-  ['skill-core', 'agent-orchestration', 'drives'],
-  ['skill-core', 'motion-library', 'includes'],
-  ['skill-core', 'color-psychology', 'includes'],
-  ['universal-playbook', 'managed-agents', 'maps-runtime'],
-  ['universal-playbook', 'copilot-adapter', 'maps-platform'],
-  ['universal-playbook', 'gemini-adapter', 'maps-platform'],
-  ['managed-agents', 'model-routing', 'extends-with'],
-  ['managed-agents', 'agent-orchestration', 'hosts'],
-  ['copilot-adapter', 'skill-core', 'loads'],
-  ['gemini-adapter', 'skill-core', 'loads']
+  ['cmd-web-design', 'web-design-skill', 'activates'],
+  ['cmd-agents-make', 'agents-make-skill', 'activates'],
+  ['cmd-marketing-pro', 'marketing-pro-skill', 'activates'],
+  ['web-design-skill', 'visual-director', 'spawns'],
+  ['web-design-skill', 'motion-engineer', 'spawns'],
+  ['web-design-skill', 'copy-strategist', 'spawns'],
+  ['web-design-skill', 'quality-auditor', 'spawns'],
+  ['agents-make-skill', 'quality-auditor', 'spawns'],
+  ['marketing-pro-skill', 'copy-strategist', 'spawns'],
+  ['marketing-pro-skill', 'quality-auditor', 'spawns'],
 ].map(([from, to, relation]) => ({ from, to, relation }));
 
 const graph = {

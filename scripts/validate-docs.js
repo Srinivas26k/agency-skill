@@ -4,14 +4,19 @@ const path = require('path');
 const repoRoot = path.resolve(__dirname, '..');
 const requiredFiles = [
   'README.md',
-  'agents/AGENT.md',
+  'CLAUDE.md',
+  'GEMINI.md',
+  'skill.json',
+  'commands/web-design.md',
+  'commands/agents-make.md',
+  'commands/marketing-pro.md',
+  'skills/web-design/SKILL.md',
+  'skills/agents-make/SKILL.md',
+  'skills/marketing-pro/SKILL.md',
+  'agents/visual-director.md',
+  'agents/quality-auditor.md',
   'docs/integrations/UNIVERSAL_AGENT_PLAYBOOK.md',
-  'docs/integrations/MANAGED_AGENTS_AND_MODEL_ROUTING.md',
-  'docs/integrations/anthropic/managed_agents_overview.md',
-  'docs/integrations/anthropic/tools.md',
-  'docs/integrations/anthropic/mcp_connector.md',
   '.github/copilot-instructions.md',
-  'skills/agency-designer/SKILL.md'
 ];
 
 const missing = requiredFiles.filter((file) => !fs.existsSync(path.join(repoRoot, file)));
