@@ -1,11 +1,42 @@
 # Agents
 
-This repository orchestrates several subagents for design, build, review, and platform-integration tasks.
+Reusable agent role definitions for the Agency Designer skill.
 
-The goal is not to lock the project to a single vendor runtime. The same agent patterns should be adaptable across local IDE assistants, managed agents, and skill-based ecosystems.
+Each file defines one agent's single responsibility, input/output contract, tools, and rules. These are loaded by the skill during `/web-design`, `/agents-make`, and `/marketing-pro` workflows.
 
-## Integration Instructions
+## Included Agents
 
-1. Configure your AI agent workspace to source local instructions from `AGENCY_DESIGNER.md` or the platform-specific docs under `docs/integrations/`.
-2. Allow subagents to call `/design`, `/animate`, and other workflow commands where the host platform supports them.
-3. For managed runtimes, pair these orchestration docs with the Anthropic guides in `docs/integrations/anthropic/`.
+| Agent | File | Role |
+|---|---|---|
+| @visual-director | `visual-director.md` | Palette, typography, style selection |
+| @motion-engineer | `motion-engineer.md` | GSAP, Framer Motion, scroll behavior |
+| @copy-strategist | `copy-strategist.md` | Headlines, CTAs, conversion copy |
+| @quality-auditor | `quality-auditor.md` | S-Tier rubric check (0–50 score) |
+| @brief-analyst | `brief-analyst.md` | Parses vague briefs into structured specs |
+
+## Using These Agents
+
+The skill activates the right agents automatically based on your brief. You can also reference them directly:
+
+- In Claude Code: the skill loads them via the `agents/` directory
+- In Anthropic Managed Agents: use `docs/integrations/anthropic/define_your_agent.md` as the schema reference
+- In Cursor / Copilot: the role definitions are loaded via `.cursorrules` and `.github/copilot-instructions.md`
+
+## Adding Custom Agents
+
+Create a new `.md` file in this directory following the same format:
+
+```markdown
+---
+name: your-agent-name
+description: One sentence describing what it does
+---
+
+# @your-agent-name
+
+**Single responsibility:** ...
+**Input:** ...
+**Output:** ...
+**Tools:** ...
+**Does NOT:** ...
+```

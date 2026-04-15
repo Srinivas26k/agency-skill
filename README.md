@@ -1,135 +1,190 @@
-# Agency Designer Skill
+# agency-skill
 
-Agency Designer is a cross-platform skill pack for teams who want better AI output in three areas:
+**Agency Designer** is a cross-platform AI skill that brings agency-grade design, agent engineering, and conversion marketing into any AI IDE or coding environment.
 
-- premium web design
-- production-grade agent design
-- structured marketing copy
-
-It gives your AI workflows stronger taste, better planning, and more reusable execution patterns across Claude, Copilot, Cursor, Gemini, and similar environments.
+Install it once. Use it in Claude, Copilot, Cursor, Gemini, Goose, Kiro, Windsurf — any environment that supports skills or instruction files.
 
 [![NPM Version](https://img.shields.io/npm/v/agency-skill?color=blue&style=flat-square)](https://www.npmjs.com/package/agency-skill)
 [![License](https://img.shields.io/badge/license-MIT-blue?style=flat-square)](LICENSE)
 
-## What You Get
+---
 
-- `/web-design` for high-quality UI direction, layout planning, motion, and implementation guidance
-- `/agents-make` for building real agent systems with clear contracts, tool boundaries, and Anthropic-style agent structure
-- `/marketing-pro` for landing page copy, positioning, messaging, and CTA refinement
-- reusable role docs under `agents/`
-- integration guides for Anthropic Managed Agents, MCP, Gemini, and multi-runtime workflows
+## What It Does
 
-## Why Use It
+Three commands. Each one turns a vague idea into structured, production-ready output.
 
-Most AI workflows break in predictable ways: generic design, weak orchestration, bloated prompts, and vague agent definitions.
+| Command | What it gives you |
+|---|---|
+| `/web-design` | A full design system — palette, typography, layout, motion, components — and a `design.md` your team can build from |
+| `/agents-make` | A production-grade agent definition with model, system prompt, tools, MCP servers, skills, and callable agents — Anthropic Managed Agents style |
+| `/marketing-pro` | Conversion-focused copy — headlines that follow the [Result without Pain] formula, specific CTAs, structured page copy, and an audit score |
 
-Agency Designer fixes that by pushing the workflow toward:
+Every command interrogates your brief one question at a time, selects the right sub-agents, presents a numbered plan, and waits for your approval before doing anything.
 
-- stronger visual direction
-- better decomposition of work
-- narrower and safer tool usage
-- reusable skill-based context instead of one giant prompt
-- clearer agent definitions for managed runtimes
+---
 
 ## Install
 
-### NPX
+**Bootstrap into any project:**
 
 ```bash
 npx agency-skill init
 ```
 
-### Skills Registry
+This copies the slash commands, agent definitions, and design resources directly into your project.
+
+**Via Skills Registry:**
 
 ```bash
 skills install agency-skill
 ```
 
-### NPM
+**Via NPM:**
 
 ```bash
 npm install agency-skill
 ```
 
-## Main Commands
+---
 
-| Command | Use it for |
-|---|---|
-| `/web-design` | Turn a vague product brief into stronger UI, layout, motion, and implementation direction |
-| `/agents-make` | Design a single agent, pipeline, or director tree with production-grade contracts |
-| `/marketing-pro` | Write or refine headlines, CTA systems, and conversion-focused page copy |
+## How It Works
 
-## /agents-make Now Follows Anthropic-Style Agent Design
+1. Type `/web-design`, `/agents-make`, or `/marketing-pro` in your AI IDE
+2. Answer a few brief questions — one at a time, no walls of text
+3. Review the proposed plan
+4. Approve it, then let the skill execute with the right agents in scope
 
-`/agents-make` is not just an agent brainstorming prompt.
+---
 
-It now expects an agent system to be defined with the same level of seriousness used in Anthropic Managed Agents documentation:
+## /web-design
 
-- agent name
-- model choice
-- system prompt
-- tools
-- MCP servers if needed
-- attached skills if needed
-- callable agents if orchestration is needed
-- environment assumptions
-- session plan
-- quality gates
+Produces a complete design system for any product, page, or component.
 
-That means a user can use `/agents-make` to move from an idea to a reusable agent definition instead of getting a loose paragraph about "how an agent might work."
+**What you get:**
+- Color palette as HSL CSS variables (psychology-first, not random)
+- Premium font pairing with full type scale
+- Layout structure and component language
+- GSAP / Framer Motion animation layer
+- A `design.md` file written to your project root — your living design system doc
 
-## Anthropic Docs Included
+**Sub-commands:**
+```
+/web-design component [name]   → generate a single component
+/web-design page [type]        → full page (saas-landing, portfolio, agency, etc.)
+/web-design palette [emotion]  → psychology-first color system
+/web-design font [personality] → premium font pairing
+/web-design animate [type]     → GSAP / Framer / Anime.js animation
+/web-design audit              → quality rubric score
+/web-design style [1-100]      → apply one of 100 graphic design styles
+```
 
-If you want to build agents with Managed Agents-style structure, start here:
+---
 
-- [docs/integrations/anthropic/managed_agents_overview.md](docs/integrations/anthropic/managed_agents_overview.md)
-- [docs/integrations/anthropic/define_your_agent.md](docs/integrations/anthropic/define_your_agent.md)
-- [docs/integrations/anthropic/tools.md](docs/integrations/anthropic/tools.md)
-- [docs/integrations/anthropic/mcp_connector.md](docs/integrations/anthropic/mcp_connector.md)
-- [docs/integrations/anthropic/skills.md](docs/integrations/anthropic/skills.md)
-- [docs/integrations/anthropic/container_reference.md](docs/integrations/anthropic/container_reference.md)
+## /agents-make
 
-These docs are included so users can design agents with a proper runtime model, not just prompt wording.
+Designs a real agent system — not a vague description of one.
+
+Output follows the Anthropic Managed Agents definition format:
+
+```json
+{
+  "name": "Your Agent",
+  "model": "claude-sonnet-4-6",
+  "description": "What it does",
+  "system": "Behavioral rules and constraints",
+  "tools": [{ "type": "agent_toolset_20260401" }],
+  "mcp_servers": [],
+  "skills": [],
+  "callable_agents": [],
+  "metadata": {}
+}
+```
+
+Plus: environment definition, session contract, and quality gates.
+
+Works for any platform — if you're not on Anthropic Managed Agents, the same schema is adapted to your runtime.
+
+**Sub-commands:**
+```
+/agents-make single     → one production-ready agent definition
+/agents-make pipeline   → sequential pipeline with handoff contracts
+/agents-make director   → director + callable sub-agent tree
+/agents-make managed    → full Anthropic Managed Agents spec
+/agents-make mcp        → MCP server and tool boundary setup
+/agents-make audit      → review an existing system for gaps
+```
+
+---
+
+## /marketing-pro
+
+Structured conversion copy using proven frameworks.
+
+**What you get:**
+- Hero headline in 3 variants (using [Result without Pain] formula)
+- Sub-headline and value proposition
+- Primary and secondary CTAs — never "Learn More" or "Get Started"
+- Specific social proof copy
+- Section headlines and FAQ objection handlers
+- Conversion audit score
+
+**Frameworks available:** PAS, AIDA, FAB, BAB
+
+**Sub-commands:**
+```
+/marketing-pro headline [context]  → 5 headline variants
+/marketing-pro cta [action]        → CTA copy variants
+/marketing-pro audit               → conversion rubric score
+/marketing-pro rewrite             → full page copy rewrite
+/marketing-pro email [type]        → email sequence
+/marketing-pro seo [keyword]       → SEO-optimised copy
+/marketing-pro ab [element]        → A/B test variants
+```
+
+---
 
 ## Supported Environments
 
-- Claude Managed Agents
+Works in any AI IDE or coding agent that supports skills, instruction files, or slash commands:
+
 - Claude Code
+- Claude Managed Agents
 - GitHub Copilot
-- VS Code agent workflows
 - Cursor
 - Gemini
 - Goose
 - Kiro
 - Windsurf
-- custom agent runtimes
+- VS Code agent workflows
+- Any custom agent runtime
 
-## Typical Workflow
+---
 
-1. Install the skill in your project.
-2. Use `/web-design`, `/agents-make`, or `/marketing-pro` depending on the task.
-3. Answer the brief questions.
-4. Review the proposed system design or plan.
-5. Let the agent execute with the right files, tools, and docs in scope.
+## Agents Included
 
-## Repository Layout
+The skill ships with five reusable agent role definitions your AI can invoke during any workflow:
 
-If you want to extend or inspect the package:
+- `@visual-director` — palette, typography, and style decisions
+- `@motion-engineer` — GSAP, Framer Motion, and scroll behavior
+- `@copy-strategist` — headlines, CTAs, and conversion copy
+- `@quality-auditor` — S-Tier rubric check (scores 0–50 across typography, color, motion, imagery, copy)
+- `@brief-analyst` — turns vague briefs into structured WHO/WHAT/FEEL/STYLE specs
 
-- `skills/` contains the core skill files
-- `commands/` contains slash-command behavior
-- `agents/` contains reusable role definitions
-- `docs/integrations/` contains runtime-specific guidance
-- `scripts/` contains validation and graph tooling
+---
 
-## Development
+## Anthropic Agent Docs Included
 
-```bash
-npm test
-npm run validate:docs
-npm run build:graph
-```
+Full Anthropic Managed Agents documentation is bundled so your AI can reference the real spec while designing:
+
+- Agent definition schema
+- Tool configuration (built-in toolset + custom tools)
+- MCP connector setup
+- Skills attachment
+- Environment and session planning
+- Hallucination reduction patterns
+
+---
 
 ## License
 
-MIT. See [LICENSE](LICENSE).
+MIT. Created by [Srinivas Nampalli](https://www.linkedin.com/in/srinivas-nampalli/).
