@@ -67,39 +67,35 @@ Key docs:
 
 ## Installation
 
-This project now uses one canonical public name: `agency-skill`.
-
-### Via NPX
-
-Bootstrap the starter kit into any project:
+### Via NPX (bootstrap into any project)
 
 ```bash
 npx agency-skill init
 ```
 
+Copies into your project: `CLAUDE.md`, `GEMINI.md`, `.cursorrules`, `.claude/commands/` (slash commands), `agents/`, and design resources.
+
 ### Via Skills Registry
 
-Add the skill from the registry:
-
 ```bash
-npx skills add Srinivas26k/agency-skill
+skills install agency-skill
 ```
 
-To preview skills before installing:
+### Via NPM
 
 ```bash
-npx skills add Srinivas26k/agency-skill -l
+npm install agency-skill
 ```
 
-### Local Repository Setup
+## Commands
 
-If you are working inside this repository:
+| Command | What it does |
+|---|---|
+| `/web-design` | Full design workflow: brief → agents → plan → execute → generates `design.md` |
+| `/agents-make` | Build AI agent systems: single agent, pipeline, or director tree |
+| `/marketing-pro` | Conversion copy: headlines, CTAs, full rewrite, audit |
 
-```bash
-bash scripts/install.sh
-```
-
-This installs dependencies, installs Git hooks when a `.git` directory is present, builds the knowledge graph, and validates the documentation set.
+Each command interrogates your brief one question at a time, selects the right agents, presents a numbered implementation plan, and waits for your approval before executing.
 
 ## Supported Platforms
 
