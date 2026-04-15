@@ -1,26 +1,22 @@
 {
-  "name": "Agency Designer Skill",
+  "name": "agency-skill",
   "brand": "Agency Designer",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "author": "Srinivas Nampalli",
-  "description": "Cross-platform agency framework for frontend execution, managed agents, and multi-model AI workflows.",
+  "description": "Cross-platform agency framework for premium frontend execution, managed agents, and multi-model AI IDE workflows.",
   "platforms": [
-    "antigravity",
-    "cursor",
-    "windsurf",
-    "claude-code",
-    "managed-agents",
-    "github-copilot",
-    "gemini",
-    "goose",
-    "kiro",
-    "qwen",
-    "vscode"
+    "cursor", "windsurf", "claude-code", "managed-agents",
+    "github-copilot", "gemini", "goose", "kiro", "qwen", "vscode", "opencode"
   ],
-  "main_instruction": "skills/agency-designer/SKILL.md",
-  "rules": [
-    ".cursorrules",
-    ".claude-plugin/instructions.md",
-    "docs/AGENCY_DESIGNER.md"
+  "main_instruction": "skills/web-design/SKILL.md",
+  "commands": [
+    { "name": "web-design", "file": "commands/web-design.md" },
+    { "name": "agents-make", "file": "commands/agents-make.md" },
+    { "name": "marketing-pro", "file": "commands/marketing-pro.md" }
+  ],
+  "skills": [
+    { "name": "web-design", "file": "skills/web-design/SKILL.md" },
+    { "name": "agents-make", "file": "skills/agents-make/SKILL.md" },
+    { "name": "marketing-pro", "file": "skills/marketing-pro/SKILL.md" }
   ]
 }
