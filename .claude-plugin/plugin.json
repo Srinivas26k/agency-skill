@@ -1,0 +1,23 @@
+{
+  "name": "agency-skill",
+  "description": "Agency Designer — premium UI/UX, agent orchestration, and conversion marketing for any AI IDE.",
+  "version": "2.0.2",
+  "instructions": ".claude-plugin/instructions.md",
+  "commands": [
+    {
+      "name": "web-design",
+      "description": "Premium UI/UX design workflow — brief, agents, plan, execute, generate design.md",
+      "instructionFile": "commands/web-design.md"
+    },
+    {
+      "name": "agents-make",
+      "description": "Design and build AI agent systems — single agent, pipeline, or director tree",
+      "instructionFile": "commands/agents-make.md"
+    },
+    {
+      "name": "marketing-pro",
+      "description": "Conversion-focused copy — headlines, CTAs, full page rewrite, audit",
+      "instructionFile": "commands/marketing-pro.md"
+    }
+  ]
+}
