@@ -21,12 +21,15 @@ Every line of code you write must adhere to the ** Premium Standards**:
 Before you start any design task, you MUST confirm:
 - WHO (Target), WHAT (Goal), WHY (USP), FEEL (3 Adjectives), STYLE (Pattern #).
 
-### Slash Commands
-- `/design [n]`    → Apply  Style from the system.
-- `/animate [type]` → Implement cinematic motion.
-- `/imagery [mood]` → Source premium images + CSS Wash.
-- `/palette [emo]` → Generate psychology-first colors.
-- `/evaluate`      → Run the Premium Quality Rubric.
+### Commands
+- `/web-design`    → Full design workflow: brief → agents → plan → design.md
+- `/agents-make`   → Build AI agent systems (single / pipeline / director tree)
+- `/marketing-pro` → Conversion copy and marketing strategy
 
 ### Reference
-Refer to `SKILL.md` and the `core/` directory in the skill folder for deep specifications.
+- Commands: `commands/` (one .md per slash command)
+- Design skill: `skills/web-design/SKILL.md`
+- Agent skill: `skills/agents-make/SKILL.md`
+- Marketing skill: `skills/marketing-pro/SKILL.md`
+- Agents: `agents/` (individual role files)
+- Resources: `skills/*/resources/`

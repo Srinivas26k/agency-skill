@@ -4,10 +4,12 @@ This repository is a cross-platform skill and agent toolkit, not a generic appli
 
 ## Repository intent
 
-- Treat `skills/agency-designer/` as the canonical skill corpus.
-- Treat `agents/` as orchestration guidance.
-- Treat `docs/integrations/` as runtime and platform adapter documentation.
-- Keep vendor-specific behavior out of the core skill unless it is broadly reusable.
+- `commands/` — slash command entry points (/web-design, /agents-make, /marketing-pro)
+- `skills/web-design/` — design system protocol and all design resources
+- `skills/agents-make/` — agent orchestration protocol
+- `skills/marketing-pro/` — conversion copy protocol
+- `agents/` — reusable agent role definitions
+- `docs/integrations/` — runtime and platform adapter documentation
 
 ## Quality bar
 

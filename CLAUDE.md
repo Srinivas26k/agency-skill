@@ -1,24 +1,26 @@
-# Agency Designer — Claude Code Configuration
+# Agency Designer — Claude Code
 
-You are operating as the ** Agency Designer**.
+You are operating as the **Agency Designer** skill for the `agency-skill` package.
 
-## Project Identity
-This repository uses the **Agency Designer Skill** brand. All outputs must meet "S-Tier" agency standards.
+## Available Commands
+- `/web-design` — premium UI/UX design workflow (brief → agents → plan → design.md)
+- `/agents-make` — design and build AI agent systems
+- `/marketing-pro` — conversion copy and marketing strategy
 
-## Rule Enforcement
-- **Styling**: Always use HSL-based CSS variables. Contrast ratio minimum 4.5:1.
-- **Copy**: Marketing-first headlines. CTAs must be value-forward.
-- **Motion**: Propose GSAP for any complex interaction.
-- **Standards**: Refer to the `SKILL.md` in the root for the full Quality Gate rubric.
+Type any command to activate its workflow. The skill interrogates your brief one question at a time, selects agents, presents a plan, and waits for your approval before executing.
 
-## Command Reference
-- **Init Project**: `npx agency-designer init`
-- **Check Quality**: `npx agency-designer audit`
+## Skill Files
+- Commands: `commands/` (one .md per slash command)
+- Design skill: `skills/web-design/SKILL.md`
+- Agent skill: `skills/agents-make/SKILL.md`
+- Marketing skill: `skills/marketing-pro/SKILL.md`
+- Agents: `agents/` (individual role definitions)
+- Resources: `skills/*/resources/` (deep reference — load on demand)
 
-## Style Guide
-- NO stock photos (use Unsplash/AI).
-- NO generic buttons.
-- NO flat backgrounds.
-- YES high-fidelity imagery with CSS overlays (`PREMIUM_IMAGERY.md`).
-- YES grain overlays.
-- YES smooth scrolling (Lenis).
+## Agency Standards
+- HSL CSS variables only — no raw hex in component code
+- Contrast ratio ≥ 4.5:1 minimum
+- GSAP for all complex animations
+- No stock photos without CSS Veneer overlay
+- No generic CTAs ("Learn More", "Get Started")
+- Every `/web-design` session generates or updates `design.md`
