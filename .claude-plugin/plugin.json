@@ -1,7 +1,7 @@
 {
   "name": "agency-skill",
   "description": "Agency Designer — premium UI/UX, agent orchestration, and conversion marketing for any AI IDE.",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "instructions": ".claude-plugin/instructions.md",
   "commands": [
     {

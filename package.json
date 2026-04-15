@@ -1,6 +1,6 @@
 {
   "name": "agency-skill",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "A cross-platform agency framework and skill toolkit for premium frontend execution, managed agents, and multi-model AI IDE workflows.",
   "main": "index.js",
   "bin": {
@@ -13,10 +13,26 @@
     "install:hooks": "bash scripts/install-hooks.sh"
   },
   "keywords": [
-    "ai", "agency-framework", "frontend-agency", "agent-orchestration",
-    "design-system", "premium-ui", "managed-agents", "multi-model", "mcp",
-    "cursor", "claude-code", "github-copilot", "gemini", "goose", "kiro",
-    "web-design", "marketing", "ux", "srinivas-nampalli", "agency-skill"
+    "ai",
+    "agency-framework",
+    "frontend-agency",
+    "agent-orchestration",
+    "design-system",
+    "premium-ui",
+    "managed-agents",
+    "multi-model",
+    "mcp",
+    "cursor",
+    "claude-code",
+    "github-copilot",
+    "gemini",
+    "goose",
+    "kiro",
+    "web-design",
+    "marketing",
+    "ux",
+    "srinivas-nampalli",
+    "agency-skill"
   ],
   "author": {
     "name": "Srinivas Nampalli",

@@ -1,7 +1,7 @@
 {
   "name": "agency-skill",
   "brand": "Agency Designer",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "author": "Srinivas Nampalli",
   "description": "Cross-platform agency framework for premium frontend execution, managed agents, and multi-model AI IDE workflows.",
   "platforms": [

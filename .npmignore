@@ -1,0 +1,16 @@
+# Internal planning docs — not needed by users
+docs/superpowers/
+
+# Dev tooling — only needed for maintainers
+hooks/
+tests/
+scripts/
+
+# Git metadata
+.git/
+.gitattributes
+.version-bump.json
+
+# IDE-specific configs not relevant to npm users
+.codex/
+.opencode/
